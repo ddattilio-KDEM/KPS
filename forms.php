@@ -1,15 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <?php
 require_once(dirname(__FILE__) . '/extlib/vdaemon/vdaemon.php');
-require_once(dirname(__FILE__) . '/config.php');
+require_once(dirname(__FILE__) . '/core/config.php');
 ?>
 <?php
 session_start();
 ?>
 <?php
-$mysqli = new mysqli("localhost", "devbryan", "Bryan@#27", "EOP");
+$mysqli = new mysqli("localhost", "devscott", "DevDom@#01", "EOP");
 if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
@@ -23,74 +22,74 @@ if ($result = $mysqli->query($query)) {
 
     /* fetch object array */
     while ($obj = $result->fetch_object()) {
-		$e001_1= $obj->{'standardA001'};$e001_2= $obj->{'standardI001'};$e001_3= $obj->{'comments001'}; 
-		$e002_1= $obj->{'standardA002'};$e002_2= $obj->{'standardI002'};$e002_3= $obj->{'comments002'}; 
-		$e003_1= $obj->{'standardA003'};$e003_2= $obj->{'standardI003'};$e003_3= $obj->{'comments003'}; 
-		$e004_1= $obj->{'standardA004'};$e004_2= $obj->{'standardI004'};$e004_3= $obj->{'comments004'}; 
-		$e005_1= $obj->{'standardA005'};$e005_2= $obj->{'standardI005'};$e005_3= $obj->{'comments005'}; 
-		$e006_1= $obj->{'standardA006'};$e006_2= $obj->{'standardI006'};$e006_3= $obj->{'comments006'}; 
-		$e007_1= $obj->{'standardA007'};$e007_2= $obj->{'standardI007'};$e007_3= $obj->{'comments007'}; 
-		$e008_1= $obj->{'standardA008'};$e008_2= $obj->{'standardI008'};$e008_3= $obj->{'comments008'}; 
-		$e009_1= $obj->{'standardA009'};$e009_2= $obj->{'standardI009'};$e009_3= $obj->{'comments009'}; 
-		$e010_1= $obj->{'standardA010'};$e010_2= $obj->{'standardI010'};$e010_3= $obj->{'comments010'}; 
-		$e011_1= $obj->{'standardA011'};$e011_2= $obj->{'standardI011'};$e011_3= $obj->{'comments011'}; 
-		$e012_1= $obj->{'standardA012'};$e012_2= $obj->{'standardI012'};$e012_3= $obj->{'comments012'};
-		$e013_1= $obj->{'standardA013'};$e013_2= $obj->{'standardI013'};$e013_3= $obj->{'comments013'}; 
-		$e014_1= $obj->{'standardA014'};$e014_2= $obj->{'standardI014'};$e014_3= $obj->{'comments014'}; 
-		$e015_1= $obj->{'standardA015'};$e015_2= $obj->{'standardI015'};$e015_3= $obj->{'comments015'}; 
-		$e016_1= $obj->{'standardA016'};$e016_2= $obj->{'standardI016'};$e016_3= $obj->{'comments016'}; 
-		$e017_1= $obj->{'standardA017'};$e017_2= $obj->{'standardI017'};$e017_3= $obj->{'comments017'}; 
-		$e018_1= $obj->{'standardA018'};$e018_2= $obj->{'standardI018'};$e018_3= $obj->{'comments018'}; 
-		$e019_1= $obj->{'standardA019'};$e019_2= $obj->{'standardI019'};$e019_3= $obj->{'comments019'}; 
-		$e020_1= $obj->{'standardA020'};$e020_2= $obj->{'standardI020'};$e020_3= $obj->{'comments020'}; 
-		$e021_1= $obj->{'standardA021'};$e021_2= $obj->{'standardI021'};$e021_3= $obj->{'comments021'}; 
-		$e022_1= $obj->{'standardA022'};$e022_2= $obj->{'standardI022'};$e022_3= $obj->{'comments022'}; 
-		$e023_1= $obj->{'standardA023'};$e023_2= $obj->{'standardI023'};$e023_3= $obj->{'comments023'}; 
-		$e024_1= $obj->{'standardA024'};$e024_2= $obj->{'standardI024'};$e024_3= $obj->{'comments024'};
-		$e025_1= $obj->{'standardA025'};$e025_2= $obj->{'standardI025'};$e025_3= $obj->{'comments025'}; 
-		$e026_1= $obj->{'standardA026'};$e026_2= $obj->{'standardI026'};$e026_3= $obj->{'comments026'}; 
-		$e027_1= $obj->{'standardA027'};$e027_2= $obj->{'standardI027'};$e027_3= $obj->{'comments027'}; 
-		$e028_1= $obj->{'standardA028'};$e028_2= $obj->{'standardI028'};$e028_3= $obj->{'comments028'};
-		$e029_1= $obj->{'standardA029'};$e029_2= $obj->{'standardI029'};$e029_3= $obj->{'comments029'}; 
-		$e030_1= $obj->{'standardA030'};$e030_2= $obj->{'standardI030'};$e030_3= $obj->{'comments030'}; 
-		$e031_1= $obj->{'standardA031'};$e031_2= $obj->{'standardI031'};$e031_3= $obj->{'comments031'}; 
-		$e032_1= $obj->{'standardA032'};$e032_2= $obj->{'standardI032'};$e032_3= $obj->{'comments032'}; 
-		$e033_1= $obj->{'standardA033'};$e033_2= $obj->{'standardI033'};$e033_3= $obj->{'comments033'}; 
-		$e034_1= $obj->{'standardA034'};$e034_2= $obj->{'standardI034'};$e034_3= $obj->{'comments034'}; 
-		$e035_1= $obj->{'standardA035'};$e035_2= $obj->{'standardI035'};$e035_3= $obj->{'comments035'}; 
-		$e036_1= $obj->{'standardA036'};$e036_2= $obj->{'standardI036'};$e036_3= $obj->{'comments036'}; 
-		$e037_1= $obj->{'standardA037'};$e037_2= $obj->{'standardI037'};$e037_3= $obj->{'comments037'}; 
-		$e038_1= $obj->{'standardA038'};$e038_2= $obj->{'standardI038'};$e038_3= $obj->{'comments038'}; 
-		$e039_1= $obj->{'standardA039'};$e039_2= $obj->{'standardI039'};$e039_3= $obj->{'comments039'}; 
-		$e040_1= $obj->{'standardA040'};$e040_2= $obj->{'standardI040'};$e040_3= $obj->{'comments040'}; 
-		$e041_1= $obj->{'standardA041'};$e041_2= $obj->{'standardI041'};$e041_3= $obj->{'comments041'}; 
-		$e042_1= $obj->{'standardA042'};$e042_2= $obj->{'standardI042'};$e042_3= $obj->{'comments042'}; 
-		$e043_1= $obj->{'standardA043'};$e043_2= $obj->{'standardI043'};$e043_3= $obj->{'comments043'}; 
-		$e044_1= $obj->{'standardA044'};$e044_2= $obj->{'standardI044'};$e044_3= $obj->{'comments044'};
-		$e045_1= $obj->{'standardA045'};$e045_2= $obj->{'standardI045'};$e045_3= $obj->{'comments045'}; 
-		$e046_1= $obj->{'standardA046'};$e046_2= $obj->{'standardI046'};$e046_3= $obj->{'comments046'}; 
-		$e047_1= $obj->{'standardA047'};$e047_2= $obj->{'standardI047'};$e047_3= $obj->{'comments047'}; 
-		$e048_1= $obj->{'standardA048'};$e048_2= $obj->{'standardI048'};$e048_3= $obj->{'comments048'}; 
-		$e049_1= $obj->{'standardA049'};$e049_2= $obj->{'standardI049'};$e049_3= $obj->{'comments049'};
-		$e050_1= $obj->{'standardA050'};$e050_2= $obj->{'standardI050'};$e050_3= $obj->{'comments050'}; 
-		$e051_1= $obj->{'standardA051'};$e051_2= $obj->{'standardI051'};$e051_3= $obj->{'comments051'}; 
-		$e052_1= $obj->{'standardA052'};$e052_2= $obj->{'standardI052'};$e052_3= $obj->{'comments052'}; 
-		$e053_1= $obj->{'standardA053'};$e053_2= $obj->{'standardI053'};$e053_3= $obj->{'comments053'}; 
-		$e054_1= $obj->{'standardA054'};$e054_2= $obj->{'standardI054'};$e054_3= $obj->{'comments054'}; 
-		$e055_1= $obj->{'standardA055'};$e055_2= $obj->{'standardI055'};$e055_3= $obj->{'comments055'}; 
-		$e056_1= $obj->{'standardA056'};$e056_2= $obj->{'standardI056'};$e056_3= $obj->{'comments056'}; 
-		$e057_1= $obj->{'standardA057'};$e057_2= $obj->{'standardI057'};$e057_3= $obj->{'comments057'}; 
-		$e058_1= $obj->{'standardA058'};$e058_2= $obj->{'standardI058'};$e058_3= $obj->{'comments058'}; 
-		$e059_1= $obj->{'standardA059'};$e059_2= $obj->{'standardI059'};$e059_3= $obj->{'comments059'}; 
-		$e060_1= $obj->{'standardA060'};$e060_2= $obj->{'standardI060'};$e060_3= $obj->{'comments060'}; 
-		$e061_1= $obj->{'standardA061'};$e061_2= $obj->{'standardI061'};$e061_3= $obj->{'comments061'}; 
-		$e062_1= $obj->{'standardA062'};$e062_2= $obj->{'standardI062'};$e062_3= $obj->{'comments062'}; 
-		$e063_1= $obj->{'standardA063'};$e063_2= $obj->{'standardI063'};$e063_3= $obj->{'comments063'}; 
-		$e064_1= $obj->{'standardA064'};$e064_2= $obj->{'standardI064'};$e064_3= $obj->{'comments064'}; 
-		$e065_1= $obj->{'standardA065'};$e065_2= $obj->{'standardI065'};$e065_3= $obj->{'comments065'}; 
-		$e066_1= $obj->{'standardA066'};$e066_2= $obj->{'standardI066'};$e066_3= $obj->{'comments066'}; 
-		$e067_1= $obj->{'standardA067'};$e067_2= $obj->{'standardI067'};$e067_3= $obj->{'comments067'}; 
-		$e068_1= $obj->{'standardA068'};$e068_2= $obj->{'standardI068'};$e068_3= $obj->{'comments069'}; 
+	$e001_1= $obj->{'standardA001'};$e001_2= $obj->{'standardI001'};$e001_3= $obj->{'comments001'}; 
+	$e002_1= $obj->{'standardA002'};$e002_2= $obj->{'standardI002'};$e002_3= $obj->{'comments002'}; 
+	$e003_1= $obj->{'standardA003'};$e003_2= $obj->{'standardI003'};$e003_3= $obj->{'comments003'}; 
+	$e004_1= $obj->{'standardA004'};$e004_2= $obj->{'standardI004'};$e004_3= $obj->{'comments004'}; 
+	$e005_1= $obj->{'standardA005'};$e005_2= $obj->{'standardI005'};$e005_3= $obj->{'comments005'}; 
+	$e006_1= $obj->{'standardA006'};$e006_2= $obj->{'standardI006'};$e006_3= $obj->{'comments006'}; 
+	$e007_1= $obj->{'standardA007'};$e007_2= $obj->{'standardI007'};$e007_3= $obj->{'comments007'}; 
+	$e008_1= $obj->{'standardA008'};$e008_2= $obj->{'standardI008'};$e008_3= $obj->{'comments008'}; 
+	$e009_1= $obj->{'standardA009'};$e009_2= $obj->{'standardI009'};$e009_3= $obj->{'comments009'}; 
+	$e010_1= $obj->{'standardA010'};$e010_2= $obj->{'standardI010'};$e010_3= $obj->{'comments010'}; 
+	$e011_1= $obj->{'standardA011'};$e011_2= $obj->{'standardI011'};$e011_3= $obj->{'comments011'}; 
+	$e012_1= $obj->{'standardA012'};$e012_2= $obj->{'standardI012'};$e012_3= $obj->{'comments012'};
+	$e013_1= $obj->{'standardA013'};$e013_2= $obj->{'standardI013'};$e013_3= $obj->{'comments013'}; 
+	$e014_1= $obj->{'standardA014'};$e014_2= $obj->{'standardI014'};$e014_3= $obj->{'comments014'}; 
+	$e015_1= $obj->{'standardA015'};$e015_2= $obj->{'standardI015'};$e015_3= $obj->{'comments015'}; 
+	$e016_1= $obj->{'standardA016'};$e016_2= $obj->{'standardI016'};$e016_3= $obj->{'comments016'}; 
+	$e017_1= $obj->{'standardA017'};$e017_2= $obj->{'standardI017'};$e017_3= $obj->{'comments017'}; 
+	$e018_1= $obj->{'standardA018'};$e018_2= $obj->{'standardI018'};$e018_3= $obj->{'comments018'}; 
+	$e019_1= $obj->{'standardA019'};$e019_2= $obj->{'standardI019'};$e019_3= $obj->{'comments019'}; 
+	$e020_1= $obj->{'standardA020'};$e020_2= $obj->{'standardI020'};$e020_3= $obj->{'comments020'}; 
+	$e021_1= $obj->{'standardA021'};$e021_2= $obj->{'standardI021'};$e021_3= $obj->{'comments021'}; 
+	$e022_1= $obj->{'standardA022'};$e022_2= $obj->{'standardI022'};$e022_3= $obj->{'comments022'}; 
+	$e023_1= $obj->{'standardA023'};$e023_2= $obj->{'standardI023'};$e023_3= $obj->{'comments023'}; 
+	$e024_1= $obj->{'standardA024'};$e024_2= $obj->{'standardI024'};$e024_3= $obj->{'comments024'};
+	$e025_1= $obj->{'standardA025'};$e025_2= $obj->{'standardI025'};$e025_3= $obj->{'comments025'}; 
+	$e026_1= $obj->{'standardA026'};$e026_2= $obj->{'standardI026'};$e026_3= $obj->{'comments026'}; 
+	$e027_1= $obj->{'standardA027'};$e027_2= $obj->{'standardI027'};$e027_3= $obj->{'comments027'}; 
+	$e028_1= $obj->{'standardA028'};$e028_2= $obj->{'standardI028'};$e028_3= $obj->{'comments028'};
+	$e029_1= $obj->{'standardA029'};$e029_2= $obj->{'standardI029'};$e029_3= $obj->{'comments029'}; 
+	$e030_1= $obj->{'standardA030'};$e030_2= $obj->{'standardI030'};$e030_3= $obj->{'comments030'}; 
+	$e031_1= $obj->{'standardA031'};$e031_2= $obj->{'standardI031'};$e031_3= $obj->{'comments031'}; 
+	$e032_1= $obj->{'standardA032'};$e032_2= $obj->{'standardI032'};$e032_3= $obj->{'comments032'}; 
+	$e033_1= $obj->{'standardA033'};$e033_2= $obj->{'standardI033'};$e033_3= $obj->{'comments033'}; 
+	$e034_1= $obj->{'standardA034'};$e034_2= $obj->{'standardI034'};$e034_3= $obj->{'comments034'}; 
+	$e035_1= $obj->{'standardA035'};$e035_2= $obj->{'standardI035'};$e035_3= $obj->{'comments035'}; 
+	$e036_1= $obj->{'standardA036'};$e036_2= $obj->{'standardI036'};$e036_3= $obj->{'comments036'}; 
+	$e037_1= $obj->{'standardA037'};$e037_2= $obj->{'standardI037'};$e037_3= $obj->{'comments037'}; 
+	$e038_1= $obj->{'standardA038'};$e038_2= $obj->{'standardI038'};$e038_3= $obj->{'comments038'}; 
+	$e039_1= $obj->{'standardA039'};$e039_2= $obj->{'standardI039'};$e039_3= $obj->{'comments039'}; 
+	$e040_1= $obj->{'standardA040'};$e040_2= $obj->{'standardI040'};$e040_3= $obj->{'comments040'}; 
+	$e041_1= $obj->{'standardA041'};$e041_2= $obj->{'standardI041'};$e041_3= $obj->{'comments041'}; 
+	$e042_1= $obj->{'standardA042'};$e042_2= $obj->{'standardI042'};$e042_3= $obj->{'comments042'}; 
+	$e043_1= $obj->{'standardA043'};$e043_2= $obj->{'standardI043'};$e043_3= $obj->{'comments043'}; 
+	$e044_1= $obj->{'standardA044'};$e044_2= $obj->{'standardI044'};$e044_3= $obj->{'comments044'};
+	$e045_1= $obj->{'standardA045'};$e045_2= $obj->{'standardI045'};$e045_3= $obj->{'comments045'}; 
+	$e046_1= $obj->{'standardA046'};$e046_2= $obj->{'standardI046'};$e046_3= $obj->{'comments046'}; 
+	$e047_1= $obj->{'standardA047'};$e047_2= $obj->{'standardI047'};$e047_3= $obj->{'comments047'}; 
+	$e048_1= $obj->{'standardA048'};$e048_2= $obj->{'standardI048'};$e048_3= $obj->{'comments048'}; 
+	$e049_1= $obj->{'standardA049'};$e049_2= $obj->{'standardI049'};$e049_3= $obj->{'comments049'};
+	$e050_1= $obj->{'standardA050'};$e050_2= $obj->{'standardI050'};$e050_3= $obj->{'comments050'}; 
+	$e051_1= $obj->{'standardA051'};$e051_2= $obj->{'standardI051'};$e051_3= $obj->{'comments051'}; 
+	$e052_1= $obj->{'standardA052'};$e052_2= $obj->{'standardI052'};$e052_3= $obj->{'comments052'}; 
+	$e053_1= $obj->{'standardA053'};$e053_2= $obj->{'standardI053'};$e053_3= $obj->{'comments053'}; 
+	$e054_1= $obj->{'standardA054'};$e054_2= $obj->{'standardI054'};$e054_3= $obj->{'comments054'}; 
+	$e055_1= $obj->{'standardA055'};$e055_2= $obj->{'standardI055'};$e055_3= $obj->{'comments055'}; 
+	$e056_1= $obj->{'standardA056'};$e056_2= $obj->{'standardI056'};$e056_3= $obj->{'comments056'}; 
+	$e057_1= $obj->{'standardA057'};$e057_2= $obj->{'standardI057'};$e057_3= $obj->{'comments057'}; 
+	$e058_1= $obj->{'standardA058'};$e058_2= $obj->{'standardI058'};$e058_3= $obj->{'comments058'}; 
+	$e059_1= $obj->{'standardA059'};$e059_2= $obj->{'standardI059'};$e059_3= $obj->{'comments059'}; 
+	$e060_1= $obj->{'standardA060'};$e060_2= $obj->{'standardI060'};$e060_3= $obj->{'comments060'}; 
+	$e061_1= $obj->{'standardA061'};$e061_2= $obj->{'standardI061'};$e061_3= $obj->{'comments061'}; 
+	$e062_1= $obj->{'standardA062'};$e062_2= $obj->{'standardI062'};$e062_3= $obj->{'comments062'}; 
+	$e063_1= $obj->{'standardA063'};$e063_2= $obj->{'standardI063'};$e063_3= $obj->{'comments063'}; 
+	$e064_1= $obj->{'standardA064'};$e064_2= $obj->{'standardI064'};$e064_3= $obj->{'comments064'}; 
+	$e065_1= $obj->{'standardA065'};$e065_2= $obj->{'standardI065'};$e065_3= $obj->{'comments065'}; 
+	$e066_1= $obj->{'standardA066'};$e066_2= $obj->{'standardI066'};$e066_3= $obj->{'comments066'}; 
+	$e067_1= $obj->{'standardA067'};$e067_2= $obj->{'standardI067'};$e067_3= $obj->{'comments067'}; 
+	$e068_1= $obj->{'standardA068'};$e068_2= $obj->{'standardI068'};$e068_3= $obj->{'comments069'}; 
     $e069_1= $obj->{'standardA069'};$e069_2= $obj->{'standardI069'};$e069_3= $obj->{'comments069'};
     $e070_1= $obj->{'standardA070'};$e070_2= $obj->{'standardI070'};$e070_3= $obj->{'comments070'};
     $e071_1= $obj->{'standardA071'};$e071_2= $obj->{'standardI071'};$e071_3= $obj->{'comments071'};
@@ -737,8 +736,6 @@ $mysqli->close();
 	<script src = "DebrisPlanButton.js"></script> <!--JavaScript for Debris Plan Button-->
 	<script src = "BorderCountyButton.js"></script> <!--Java Script for Border County Button-->
 	<script src = "FederalLeveeButton.js"></script> <!--JavaScript for Federal Levee-->
-	<script src = "config.php"></script> <!--Config PHP-->
-	<script src = "/extlib/vdaemon/vdaemon.php"></script>
 	<!--CSS for styling the standards, radio buttons, and comments-->
 	<style type="text/css">.tdradios
 	{
@@ -788,85 +785,19 @@ $mysqli->close();
 <link href="fonts.css" media="all" rel="stylesheet" type="text/css" /><!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 <div id="header-wrapper">
 <div class="container" id="header">
-<div id="logo"><script>
-function calc(NEED,AVAILABLE,SUM,DD) {
-   var one = parseInt(document.getElementById(NEED).value);
-   var two = parseInt(document.getElementById(AVAILABLE).value);
+<div id="logo">
 
-   if(isNaN(one)){
-      	one=0;
-      	document.getElementById(NEED).value = "";
-      	}
-   if(isNaN(two)){
-   	two=0;	
-   	document.getElementById(AVAILABLE).value = "";}
-   var gap = one - two;
-   if(gap<0){
-  	gap = 0}
-   if((document.getElementById(NEED).value == "") && (document.getElementById(AVAILABLE).value == "")){
-  	gap = "";}
-   document.getElementById(SUM).value = gap;
-   if(document.getElementById(SUM).value > 0){
-   	document.getElementById(DD).disabled = false;
-   	document.getElementById(DD).selectedIndex = "3";
-   	document.getElementById(DD).style.border = "thick solid red";
-	document.getElementById(DD).required = true;
-	document.getElementById(DD).options[0].style.visibility = "hidden";
-	document.getElementById(DD).options[1].style.visibility = "hidden";
-	document.getElementById(DD).options[2].style.visibility = "hidden";
-	document.getElementById(DD).options[3].style.visibility = "hidden";
-	document.getElementById(DD).options[4].style.visibility = "visible";
-	document.getElementById(DD).options[5].style.visibility = "visible";
-	document.getElementById(DD).options[6].style.visibility = "visible";
-	document.getElementById(DD).options[7].style.visibility = "visible";
-	document.getElementById(DD).options[8].style.visibility = "visible";
-	document.getElementById(DD).options[9].style.visibility = "visible";
-	document.getElementById(DD).options[10].style.visibility = "visible";
-	document.getElementById(DD).options[11].style.visibility = "visible";}
-   if(document.getElementById(SUM).value == "0"){
-   	document.getElementById(DD).disabled = true;
-	document.getElementById(DD).value = "No Gap Identified";
-	document.getElementById(DD).style.border = "black";}
-   if(document.getElementById(SUM).value == ""){
-	document.getElementById(DD).value = "";
-	document.getElementById(DD).style.border = "black";	
-    document.getElementById(DD).disabled = true;}
-}
-</script><script>
-function enable(NEED,AVAILABLE,SUM,DD) {
-	var one = parseInt(document.getElementById(NEED).value);
-	var two = parseInt(document.getElementById(AVAILABLE).value);
 
-	if(isNaN(one)){
-      	one=0;
-      	document.getElementById(NEED).value = "";
-      	}
-	if(isNaN(two)){
-		two=0;	
-		document.getElementById(AVAILABLE).value = "";}
-	var gap = one - two;
-	if(gap<0){
-		gap = 0}
-	if((document.getElementById(NEED).value == "") && (document.getElementById(AVAILABLE).value == "")){
-		gap = "";}
-	document.getElementById(SUM).value = gap;
-   	if(document.getElementById(SUM).value > 0){
-		document.getElementById(DD).disabled = false;}
-	if(document.getElementById(SUM).value == "0"){
-		document.getElementById(DD).disabled = true;
-		document.getElementById(DD).value = "No Gap Identified";}
-}
-</script><script>
-function color(DD) {
-   var e = document.getElementById(DD);
-   
-   e.style.border = "black";
-}
-</script>
-<form action="core/process.php" id="registration" method="post" runat="vdaemon"><input name="formID" type="hidden" value="KCAT" /> <input name="redirect_to" type="hidden" value="" /> <input id="progress" name="progress" type="hidden" value="" /> <input name="user_id" type="hidden" user_name="" value="&lt;?php echo $_SESSION[" />
+<form action="core/process.php" id="registration" method="post" runat="vdaemon">
+<input name="formID" type="hidden" value="EOPDATA" /> 
+<input name="redirect_to" type="hidden" value="" /> 
+<input name="user_id" type="hidden"  value="<?php echo $_SESSION["user_name"]; ?>" />
+
+
+
 
 <h1><a>KPS Assessment Tool</a></h1>
-<span><a>Kansas Planning Standards Assessment&nbsp;</a></span></form>
+<span><a>Kansas Planning Standards Assessment&nbsp;</a></span>
 </div>
 
 <div id="menu">
@@ -927,22 +858,116 @@ if ( $msg == '1' ) {
 
 <div id="tabs-0">
 <p><strong>Welcome to the Kansas Planning Standards Assessment Tool Website! We hope you enjoy your stay! </strong></p>
-<input type = "hidden" name="formID" value="EOPDATA"/>
 
 
+What County will You be reviewing today? <select name="countyName" id="countyID" >
+	<option value="blank"></option>
+	<option value="Allen">Allen</option>
+	<option value="Anderson">Anderson</option>
+	<option value="Atchison">Atchison</option>
+	<option value="Barber">Barber</option>
+	<option value="Barton">Barton</option>
+	<option value="Bourbon">Bourbon</option>
+	<option value="Brown">Brown</option>
+	<option value="Butler">Butler</option>
+	<option value="Chase">Chase</option>
+	<option value="Chautaqua">Chautaqua</option>
+	<option value="Cherokee">Cherokee</option>
+	<option value="Cheyenne">Cheyenee</option>
+	<option value="Clark">Clark</option>
+	<option value="Clay">Clay</option>
+	<option value="Cloud">Cloud</option>
+	<option value="Coffey">Coffey</option>
+	<option value="Comanche">Comanche</option>
+	<option value="Cowley">Cowley</option>
+	<option value="Crawford">Crawford</option>
+	<option value="Decatur">Decatur</option>
+	<option value="Dickinson">dickinson</option>
+	<option value="Doniphan">Doniphan</option>
+	<option value="Douglas">Douglas</option>
+	<option value="Edwards">Edwards</option>
+	<option value="Elk">Elk</option>
+	<option value="Ellis">Ellis</option>
+	<option value="Ellsworth">Ellsworth</option>
+	<option value="Finney">Finney</option>
+	<option value="Ford">Ford</option>
+	<option value="Franklin">Franklin</option>
+	<option value="Geary">Geary</option>
+	<option value="Gove">Gove</option>
+	<option value="Graham">Graham</option>
+	<option value="Grant">Grant</option>
+	<option value="Gray">Gray</option>
+	<option value="Greeley">Greeley</option>
+	<option value="Greenwood">Greenwood</option>
+	<option value="Hamilton">Hamilton</option>
+	<option value="Harper">Harper</option>
+	<option value="Harvey">Harvey</option>
+	<option value="Haskell">Haskell</option>
+	<option value="Hodgeman">Hodgeman</option>
+	<option value="Jackson">Jackson</option>
+	<option value="Jefferson">Jefferson</option>
+	<option value="Jewell">Jewell</option>
+	<option value="Johnson">Johnson</option>
+	<option value="Kearny">Kearny</option>
+	<option value="Kingman">Kingman</option>
+	<option value="Kiowa">Kiowa</option>
+	<option value="Labette">Labette</option>
+	<option value="Lane">Lane</option>
+	<option value="Leavenworth">Leavenworth</option>
+	<option value="Lincoln">Lincoln</option>
+	<option value="Linn">Linn</option>
+	<option value="Logan">Logan</option>
+	<option value="Lyon">Lyon</option>
+	<option value="Mcpherson">Mcpherson</option>
+	<option value="Marion">Marion</option>
+	<option value="Marshall">Marshall</option>
+	<option value="Meade">Meade</option>
+	<option value="Miami">Miami</option>
+	<option value="Mitchell">Mitchell</option>
+	<option value="Montgomery">Montgomery</option>
+	<option value="Morris">Morris</option>
+	<option value="morton">Morton</option>
+	<option value="Nemaha">Nemaha</option>
+	<option value="Neosho">Neosho</option>
+	<option value="Ness">Ness</option>
+	<option value="Norton">Norton</option>
+	<option value="Osage">Osage</option>
+	<option value="Osborne">Osborne</option>
+	<option value="Ottawa">Ottawa</option>
+	<option value="Pawnee">Pawnee</option>
+	<option value="Phillips">Phillips</option>
+	<option value="Pottawatomie">Pottawatomie</option>
+	<option value="Rawlins">Rawlins</option>
+	<option value="Reno">Reno</option>
+	<option value="Republic">Republic</option>
+	<option value="Rice">Rice</option>
+	<option value="Riley">Riley</option>
+	<option value="Rooks">Rooks</option>
+	<option value="Rush">Rush</option>
+	<option value="Russell">Russell</option>
+	<option value="Saline">Saline</option>
+	<option value="Scott">Scott</option>
+	<option value="Sedgwick">Sedgwick</option>
+	<option value="Seward">Seward</option>
+	<option value="Shawnee">Shawnee</option>
+	<option value="Sheridan">Sheridan</option>
+	<option value="Sherman">Sherman</option>
+	<option value="Smith">Smith</option>
+	<option value="Stafford">Stafford</option>
+	<option value="Stanton">Stanton</option>
+	<option value="Stevens">Stevens</option>
+	<option value="Sumner">Sumner</option>
+	<option value="Thomas">Thomas</option>
+	<option value="Trego">Trego</option>
+	<option value="Wabaunsee">Wabaunsee</option>
+	<option value="Wallace">Wallace</option>
+	<option value="Washington">Washington</option>
+	<option value="Wichita">Wichita</option>
+	<option value="Wilson">Wilson</option>
+	<option value="Woodson">Woodson</option>
+	<option value="Wyandotte">Wyandotte</option>
 
-<script type="text/javascript">
-	function countyChange(){
-		
-	
-	
-	}
-	
-	
-	
-	
-	
-	</script>
+</select> 
 
 <br />
 <br />
@@ -970,7 +995,7 @@ if ( $msg == '1' ) {
 			<td style="text-align: center;"><span style="font-size:18px;"><strong>Standards</strong></span></td>
 			<td style="text-align: center;"><span style="font-size:18px;"><strong>Comments:</strong></span></td>
 		</tr>
-		<tr id="row001"> <!--rowID for hiding rows-->
+	<tr id="row001"> <!--rowID for hiding rows-->
 			<td id="number001">(1)</td> <!--numberID-->
 			<td class="tdradios"><input id="standardA001" name="radio001" onchange="standardAOnChange(this.id)" type="radio" /></td> <!--accepted radio button-->
 			<td class="tdradios"><input id="standardI001" name="radio001" onchange="standardIOnChange(this.id)" type="radio" /></td> <!--incomplete radio button-->
@@ -6070,25 +6095,14 @@ if ( $msg == '1' ) {
 				<td class="tdstandard" id="standard687">Identify all Federal Reservoirs and/or Levees within the jurisdiction, If applicable. Provide Emergency
 						Action Plans (EAP) for each identified Federal Reservoir and/or Levee.</td>
 				<td class="tdcomment"><input id="comments687" size="60" type="text" /></td>
-			</tr>
-	
-	
-	
-	
-	
-	
+			</tr>	
 	</tbody>
-</table>
+   </table>
 </div>
 
 <!--Button That Runs the report (javascript referenced at the top)-->
 <div id="tabs-18"><button id="runreport" onclick="buttClick()" type="button">Run Report</button><!-- <p id="t2"></p> --></div>
-&nbsp; <script type="text/javascript"> 
-function show_alert() 
-{ 
-alert("Saving inputs. This may take a few seconds. You will be redirected upon completion."); 
-} 
-</script>
+&nbsp; 
 
 <center></center>
 
@@ -6098,4 +6112,5 @@ alert("Saving inputs. This may take a few seconds. You will be redirected upon c
 </div>
 </center>
 </div>
-<!--?php VDEnd(); ?-->
+</form>
+<?php VDEnd(); ?>
