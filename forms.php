@@ -8,7 +8,7 @@ require_once(dirname(__FILE__) . '/core/config.php');
 session_start();
 ?>
 <?php
-$mysqli = new mysqli("localhost", "devscott", "DevDom@#01", "EOP");
+$mysqli = new mysqli("localhost");
 if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
@@ -16,7 +16,7 @@ echo $mysqli->host_info . "</br>";
 
 $user=$_SESSION["user_name"];
 
-$query = "SELECT * FROM EOP WHERE county_Name='$countyName' ORDER BY ID";
+$query = "SELECT * FROM  WHERE county_Name='$countyName' ORDER BY ID";
 
 if ($result = $mysqli->query($query)) {
 
